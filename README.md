@@ -4,6 +4,11 @@
 1. install [vagrant](https://www.vagrantup.com/docs/installation/)
 2. kafka is on local virtual machine ip `192.168.33.10`
 
+## Machine commands
+
+1. enter vagrant machine `vagrant ssh`
+2. `startkafka` - will start the kafka server on the virtual machine
+
 ## Check Kafka
 
 create new topic
