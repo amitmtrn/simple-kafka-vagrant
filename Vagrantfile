@@ -72,6 +72,5 @@ Vagrant.configure("2") do |config|
     mkdir -p /home/vagrant/kafka && cd /home/vagrant/kafka
     tar -xvzf /home/vagrant/Downloads/kafka.tgz --strip 1
     echo "alias startkafka='sudo /home/vagrant/kafka/bin/zookeeper-server-start.sh /home/vagrant/kafka/config/zookeeper.properties & /home/vagrant/kafka/bin/kafka-server-start.sh /vagrant/server.properties'" >> /home/vagrant/.bashrc
-    sudo /home/vagrant/kafka/bin/zookeeper-server-start.sh /home/vagrant/kafka/config/zookeeper.properties & /home/vagrant/kafka/bin/kafka-server-start.sh /vagrant/server.properties &
   SHELL
 end
