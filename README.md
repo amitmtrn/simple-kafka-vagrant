@@ -32,6 +32,12 @@ bin/kafka-console-producer.sh --broker-list 192.168.33.10:9092 --topic test
 bin/kafka-console-consumer.sh --bootstrap-server 192.168.33.10:9092 --topic test --from-beginning
 ```
 
+### get all topics
+
+```
+bin/kafka-topics.sh --list --zookeeper 192.168.33.10:2181
+```
+
 ## Useful Actions
 
 ### Delete a topic
