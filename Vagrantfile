@@ -68,9 +68,10 @@ Vagrant.configure("2") do |config|
     apt-get update
     apt-get install wget default-jre-headless -y
     mkdir -p /home/vagrant/Downloads
-    wget "http://apache.mivzakim.net/kafka/0.11.0.2/kafka_2.11-0.11.0.2.tgz" -O /home/vagrant/Downloads/kafka.tgz
+    wget "http://apache.mivzakim.net/kafka/1.0.0/kafka_2.11-1.0.0.tgz" -O /home/vagrant/Downloads/kafka.tgz
     mkdir -p /home/vagrant/kafka && cd /home/vagrant/kafka
     tar -xvzf /home/vagrant/Downloads/kafka.tgz --strip 1
-    echo "alias startkafka='sudo /home/vagrant/kafka/bin/zookeeper-server-start.sh /home/vagrant/kafka/config/zookeeper.properties & /home/vagrant/kafka/bin/kafka-server-start.sh /vagrant/server.properties'" >> /home/vagrant/.bashrc
+     echo "alias clearkafkatopics='sudo rm -rf /tmp/kafka-logs'" >> /home/vagrant/.bashrc
+   echo "alias startkafka='sudo /home/vagrant/kafka/bin/zookeeper-server-start.sh /home/vagrant/kafka/config/zookeeper.properties & /home/vagrant/kafka/bin/kafka-server-start.sh /vagrant/server.properties'" >> /home/vagrant/.bashrc
   SHELL
 end
